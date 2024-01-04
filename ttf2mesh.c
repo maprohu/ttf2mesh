@@ -52,6 +52,11 @@
 #   define PATH_SEP '\\'
 #   define PATH_MAX MAX_PATH
 #   include <windows.h>
+#elif defined(__APPLE__)
+#   define TTF_LINUX
+#   define PATH_SEP '/'
+#   include <limits.h>
+#   include <dirent.h>
 #endif
 
 #include "ttf2mesh.h"
